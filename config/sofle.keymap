@@ -17,7 +17,7 @@
     chain-length = <29>; // Sofle Using All LEDs
 };
 
-& {
+&{
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
