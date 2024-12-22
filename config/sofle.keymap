@@ -65,6 +65,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        teste {
+            bindings = <&sl 5>;
+            key-positions = <36 49>;
+        };
+
+        teste2 {
+            bindings = <&sl 0>;
+            key-positions = <0 11>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -160,6 +174,21 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_NEXT C_PREVIOUS>;
+        };
+
+        dvorak {
+            display-name = "default";
+            bindings = <
+&kp ESCAPE      &kp N1    &kp N2        &kp N3        &kp N4                      &kp N5                                        &kp N6           &kp N7     &kp N8            &kp N9             &kp N0  &kp DELETE
+&kp TAB         &kp Q     &kp W         &kp E         &kp P                       &kp Y                                         &kp F            &kp G      &kp C             &kp R              &kp L   &kp K_CMENU
+&kp LEFT_SHIFT  &kp A     &kp O         &kp E         &kp U                       &kp I                                         &kp D            &kp H      &kp T             &kp N              &kp S   &kp SQT
+&kp LCTRL       &kp SEMI  &kp Q         &kp J         &kp K                       &kp X         &kp C_MUTE    &kp C_PLAY_PAUSE  &kp B            &kp M      &kp W             &kp V              &kp Z   &kp RSHFT
+                          &kp CAPSLOCK  &kp LEFT_GUI  &holdTap2 LEFT_ALT LA(TAB)  &lt 3 ESCAPE  &kp SPACE     &kp ENTER         &lt 1 BACKSPACE  &lt 2 TAB  &kp RC(RG(LEFT))  &kp RC(RG(RIGHT))
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_UP>,
                 <&inc_dec_kp C_NEXT C_PREVIOUS>;
         };
     };
