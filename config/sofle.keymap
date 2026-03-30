@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
@@ -141,11 +142,11 @@
         Simbols {
             display-name = "lower";
             bindings = <
-&trans     &trans       &trans         &trans        &trans     &trans                       &trans    &trans    &trans           &trans            &trans  &trans
-&kp GRAVE  &trans       &trans         &trans        &trans     &trans                       &trans    &trans    &kp SEMI         &trans            &trans  &trans
-&trans     &kp EXCL     &kp MINUS      &kp PLUS      &kp EQUAL  &kp PRCNT                    &kp RBKT  &kp LPAR  &kp RIGHT_BRACE  &kp LESS_THAN     &trans  &trans
-&trans     &kp PERCENT  &kp AMPERSAND  &kp ASTERISK  &kp HASH   &kp AT     &trans    &trans  &kp BSLH  &kp RPAR  &kp PIPE         &kp GREATER_THAN  &trans  &trans
-                        &trans         &trans        &trans     &trans     &trans    &trans  &trans    &trans    &trans           &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1   &trans        &trans     &trans                       &trans    &trans    &trans           &trans            &trans  &trans
+&kp GRAVE       &trans        &trans         &trans        &trans     &trans                       &trans    &trans    &kp SEMI         &trans            &trans  &trans
+&trans          &kp EXCL      &kp MINUS      &kp PLUS      &kp EQUAL  &kp PRCNT                    &kp RBKT  &kp LPAR  &kp RIGHT_BRACE  &kp LESS_THAN     &trans  &trans
+&trans          &kp PERCENT   &kp AMPERSAND  &kp ASTERISK  &kp HASH   &kp AT     &trans    &trans  &kp BSLH  &kp RPAR  &kp PIPE         &kp GREATER_THAN  &trans  &trans
+                              &trans         &trans        &trans     &trans     &trans    &trans  &trans    &trans    &trans           &trans
             >;
 
             sensor-bindings =
