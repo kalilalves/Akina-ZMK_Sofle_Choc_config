@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
@@ -117,7 +116,7 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_NXT  &trans  &trans  &trans  &trans      &trans                      &trans     &trans          &trans          &trans           &trans  &trans
+&trans      &trans  &trans  &trans  &trans      &trans                      &trans     &trans          &trans          &trans           &trans  &trans
 &trans      &trans  &trans  &trans  &kp INSERT  &kp HOME                    &kp PG_UP  &trans          &kp UP_ARROW    &trans           &trans  &trans
 &trans      &trans  &trans  &trans  &trans      &kp END                     &kp PG_DN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans      &trans  &trans  &trans  &trans      &trans    &trans    &trans  &trans     &kp QUESTION    &kp COMMA       &kp RA(W)        &trans  &trans
