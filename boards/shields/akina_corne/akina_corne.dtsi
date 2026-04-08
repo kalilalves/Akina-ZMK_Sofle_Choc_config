@@ -68,19 +68,19 @@ RC(2,0)  RC(2,1)  RC(2,2)  RC(2,3)  RC(2,4)  RC(2,5)    RC(2,6)  RC(2,7)  RC(2,8
          */
 
         col-gpios
-            = <&pro_micro  4 GPIO_ACTIVE_HIGH>   /* D4  - P0.20 - Coluna 0 */
-            , <&pro_micro  5 GPIO_ACTIVE_HIGH>   /* D5  - P0.22 - Coluna 1 */
-            , <&pro_micro  6 GPIO_ACTIVE_HIGH>   /* D6  - P0.24 - Coluna 2 */
-            , <&pro_micro  7 GPIO_ACTIVE_HIGH>   /* D7  - P1.00 - Coluna 3 */
-            , <&pro_micro  8 GPIO_ACTIVE_HIGH>   /* D8  - P0.11 - Coluna 4 */
-            , <&pro_micro  9 GPIO_ACTIVE_HIGH>   /* D9  - P1.04 - Coluna 5 */
+            = <&gpio0 22 GPIO_ACTIVE_HIGH>   /* P0.22 - Coluna 0 */
+            , <&gpio0 24 GPIO_ACTIVE_HIGH>   /* P0.24 - Coluna 1 */
+            , <&gpio1  0 GPIO_ACTIVE_HIGH>   /* P1.00 - Coluna 2 */
+            , <&gpio1  2 GPIO_ACTIVE_HIGH>   /* P1.02 - Coluna 3 */
+            , <&gpio1  4 GPIO_ACTIVE_HIGH>   /* P1.04 - Coluna 4 */
+            , <&gpio1  6 GPIO_ACTIVE_HIGH>   /* P1.06 - Coluna 5 */
             ;
 
         row-gpios
-            = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* SCL - P0.05 - Linha 0 */
-            , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* SDA - P0.04 - Linha 1 */
-            , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* A5  - P0.30 - Linha 2 */
-            , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* A4  - P0.31 - Linha 3 */
+            = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* P0.10 - Linha 0 */
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* P1.11 - Linha 1 */
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* P1.13 - Linha 2 */
+            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* P1.15 - Linha 3 */
             ;
     };
 };
