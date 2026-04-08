@@ -1,0 +1,5 @@
+config SHIELD_AKINA_CORNE_LEFT
+    def_bool $(shields_list_contains,akina_corne_left)
+
+config SHIELD_AKINA_CORNE_RIGHT
+    def_bool $(shields_list_contains,akina_corne_right)

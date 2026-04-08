@@ -13,10 +13,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-&led_strip {
-    chain-length = <27>; // Corne with per-key RGB
-};
-
 / {
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
