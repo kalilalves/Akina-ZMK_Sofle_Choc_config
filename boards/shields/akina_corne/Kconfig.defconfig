@@ -1,0 +1,9 @@
+if SHIELD_AKINA_CORNE
+
+config ZMK_KEYBOARD_NAME
+    default "Akina Corne Test"
+
+config ZMK_SPLIT
+    default n
+
+endif
