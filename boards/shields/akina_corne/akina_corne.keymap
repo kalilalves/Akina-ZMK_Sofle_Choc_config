@@ -17,7 +17,7 @@
  * row6 pm16  F21    F22    F23    F24    ESC    TAB    BSPC   DEL    ENTER  SPACE
  * row7 pm17  CAPS   LSHFT  RSHFT  LCTRL  RCTRL  LGUI   RGUI   LALT   RALT   GRAVE
  * row8 pm18  MINUS  EQUAL  LBKT   RBKT   BSLH   SQT    PG_UP  PG_DN  HOME   END
- * row9 pm19  UP     DOWN   LEFT   RIGHT  INS    PSCRN  SLCK   PAUSE  SCLK   NUMLK
+ * row9 pm19  UP     DOWN   LEFT   RIGHT  INS    PSCRN  SCRLK  PAUSE  NUMLK  MENU
  *
  * Exemplo: você pressiona uma tecla e aparece "F5"
  *   → row4 (pro_micro 14 = P0.03) × col4 (pro_micro 4 = P0.20)
@@ -52,7 +52,7 @@
 // row8 (pm18): símbolos + navegação
 &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &kp SQT    &kp PG_UP  &kp PG_DN  &kp HOME   &kp END
 // row9 (pm19): setas + misc
-&kp UP     &kp DOWN   &kp LEFT   &kp RIGHT  &kp INS    &kp PSCRN  &kp SLCK   &kp PAUSE  &kp KP_NUM &kp SCROLLLOCK
+&kp UP     &kp DOWN   &kp LEFT   &kp RIGHT  &kp INS    &kp PSCRN  &kp SCROLLLOCK &kp PAUSE_BREAK &kp KP_NUM &kp K_APP
             >;
         };
     };
