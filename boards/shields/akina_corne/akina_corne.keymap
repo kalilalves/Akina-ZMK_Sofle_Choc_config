@@ -6,22 +6,26 @@
  *
  * TABELA DE REFERÊNCIA (diode-direction = col2row):
  *
- *          col0   col1   col2   col3   col4   col5   col6   col7   col8   col9
- *          pm0    pm1    pm2    pm3    pm4    pm5    pm6    pm7    pm8    pm9
- * row0 pm10  1      2      3      4      5      6      7      8      9      0
- * row1 pm11  Q      W      E      R      T      Y      U      I      O      P
- * row2 pm12  A      S      D      F      G      H      J      K      L      ;
- * row3 pm13  Z      X      C      V      B      N      M      ,      .      /
- * row4 pm14  F1     F2     F3     F4     F5     F6     F7     F8     F9     F10
- * row5 pm15  F11    F12    F13    F14    F15    F16    F17    F18    F19    F20
- * row6 pm16  F21    F22    F23    F24    ESC    TAB    BSPC   DEL    ENTER  SPACE
- * row7 pm17  CAPS   LSHFT  RSHFT  LCTRL  RCTRL  LGUI   RGUI   LALT   RALT   GRAVE
- * row8 pm18  MINUS  EQUAL  LBKT   RBKT   BSLH   SQT    PG_UP  PG_DN  HOME   END
- * row9 pm19  UP     DOWN   LEFT   RIGHT  INS    PSCRN  SCRLK  PAUSE  NUMLK  MENU
+ *          col0   col1   col2   col3   col4   col5
+ *          pm4    pm5    pm6    pm7    pm8    pm9
+ * row0 pm10  1      2      3      4      5      6
+ * row1 pm11  Q      W      E      R      T      Y
+ * row2 pm12  A      S      D      F      G      H
+ * row3 pm13  Z      X      C      V      B      N
+ * row4 pm14  F1     F2     F3     F4     F5     F6
+ * row5 pm15  F7     F8     F9     F10    F11    F12
+ * row6 pm16  F13    F14    F15    F16    F17    F18
+ * row7 pm17  F19    F20    F21    F22    F23    F24
+ * row8 pm18  ESC    TAB    BSPC   DEL    ENTER  SPACE
+ * row9 pm19  UP     DOWN   LEFT   RIGHT  INS    PSCRN
  *
  * Exemplo: você pressiona uma tecla e aparece "F5"
- *   → row4 (pro_micro 14 = P0.03) × col4 (pro_micro 4 = P0.20)
- *   → row pin = pm14, col pin = pm4
+ *   → row4 (pro_micro 14 = P0.03) × col4 (pro_micro 8 = P0.10)
+ *   → row pin = pm14, col pin = pm8
+ *
+ * Pinos padrão do Corne (ZMK oficial):
+ *   cols: pm4, pm5, pm6, pm7, pm8, pm9
+ *   rows: pm14, pm15, pm16, pm10
  */
 
 #include <behaviors.dtsi>
@@ -33,26 +37,26 @@
 
         default_layer {
             bindings = <
-// row0 (pm10): teclas numéricas
-&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-// row1 (pm11): fila superior QWERTY
-&kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P
-// row2 (pm12): fila do meio ASDF
-&kp A      &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L      &kp SEMI
-// row3 (pm13): fila inferior ZXCV
-&kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
-// row4 (pm14): F1-F10
-&kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
-// row5 (pm15): F11-F20
-&kp F11    &kp F12    &kp F13    &kp F14    &kp F15    &kp F16    &kp F17    &kp F18    &kp F19    &kp F20
-// row6 (pm16): F21-F24 + teclas especiais
-&kp F21    &kp F22    &kp F23    &kp F24    &kp ESC    &kp TAB    &kp BSPC   &kp DEL    &kp ENTER  &kp SPACE
-// row7 (pm17): modificadores
-&kp CAPS   &kp LSHFT  &kp RSHFT  &kp LCTRL  &kp RCTRL  &kp LGUI   &kp RGUI   &kp LALT   &kp RALT   &kp GRAVE
-// row8 (pm18): símbolos + navegação
-&kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &kp SQT    &kp PG_UP  &kp PG_DN  &kp HOME   &kp END
-// row9 (pm19): setas + misc
-&kp UP     &kp DOWN   &kp LEFT   &kp RIGHT  &kp INS    &kp PSCRN  &kp SCROLLLOCK &kp PAUSE_BREAK &kp KP_NUM &kp K_APP
+// row0 (pm10) × cols pm4-pm9
+&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6
+// row1 (pm11) × cols pm4-pm9
+&kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y
+// row2 (pm12) × cols pm4-pm9
+&kp A      &kp S      &kp D      &kp F      &kp G      &kp H
+// row3 (pm13) × cols pm4-pm9
+&kp Z      &kp X      &kp C      &kp V      &kp B      &kp N
+// row4 (pm14) × cols pm4-pm9
+&kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6
+// row5 (pm15) × cols pm4-pm9
+&kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12
+// row6 (pm16) × cols pm4-pm9
+&kp F13    &kp F14    &kp F15    &kp F16    &kp F17    &kp F18
+// row7 (pm17) × cols pm4-pm9
+&kp F19    &kp F20    &kp F21    &kp F22    &kp F23    &kp F24
+// row8 (pm18) × cols pm4-pm9
+&kp ESC    &kp TAB    &kp BSPC   &kp DEL    &kp ENTER  &kp SPACE
+// row9 (pm19) × cols pm4-pm9
+&kp UP     &kp DOWN   &kp LEFT   &kp RIGHT  &kp INS    &kp PSCRN
             >;
         };
     };
