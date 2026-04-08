@@ -52,25 +52,25 @@
         diode-direction = "col2row";
 
         col-gpios
-            = <&pro_micro 4 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 5 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 6 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 7 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 8 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 9 GPIO_ACTIVE_HIGH>
+            = <&gpio0 20 GPIO_ACTIVE_HIGH>   /* pm4  = P0.20 */
+            , <&gpio0 13 GPIO_ACTIVE_HIGH>   /* pm5  = P0.13 */
+            , <&gpio0 24 GPIO_ACTIVE_HIGH>   /* pm6  = P0.24 */
+            , <&gpio0  9 GPIO_ACTIVE_HIGH>   /* pm7  = P0.09 */
+            , <&gpio0 10 GPIO_ACTIVE_HIGH>   /* pm8  = P0.10 */
+            , <&gpio1  6 GPIO_ACTIVE_HIGH>   /* pm9  = P1.06 */
             ;
 
         row-gpios
-            = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&gpio1  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm10 = P1.04 */
+            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm11 = P0.11 */
+            , <&gpio1  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm12 = P1.00 */
+            , <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm13 = P0.26 */
+            , <&gpio0  3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm14 = P0.03 */
+            , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm15 = P0.28 */
+            , <&gpio0  2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm16 = P0.02 */
+            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm17 = P1.15 */
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm18 = P1.13 */
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* pm19 = P1.11 */
             ;
     };
 };
